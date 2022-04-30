@@ -23,7 +23,7 @@ $stmt->bind_param("sssssss",
         $_POST["verify"]
     );
 
-//handle duplicate entry error
+
 if ($stmt->execute()) {
     //redirect user to page after successfull regisration
     //header("Location: ../php/acc_home.php");
