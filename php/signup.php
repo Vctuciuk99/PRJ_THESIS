@@ -1,5 +1,4 @@
 <?php
-    
     //prevent null
     if (empty($_POST["email"])) {
         die("Email is required");
@@ -54,7 +53,7 @@ $stmt->bind_param("sss",  $_POST["email"], $_POST["name"], $password_hash);
 //handle duplicate entry error
 if ($stmt->execute()) {
     //redirect user to page after successfull regisration
-    header("Location: ../views/signup-success.html");
+    header("Location: ../php/acc_home.php");
     exit;
 
 } else {
