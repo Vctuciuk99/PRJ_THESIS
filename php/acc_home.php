@@ -6,7 +6,7 @@
         $mysqli = require __DIR__ . "/database_conn.php";
 
         $sql = "SELECT * FROM user
-                WHERE id = {$_SESSION["user_id"]}";
+                WHERE id = {$_SESSION["user_id"]}" ;
 
         $result = $mysqli->query($sql);
         $user = $result->fetch_assoc();
@@ -25,23 +25,28 @@
         
         <?php if (isset($user)): ?>
             <h1>HOME!!!!</h1>
-            <p>WELCOME!</p>
-            <p><?= htmlspecialchars($user["name"]) ?></p>
+            
             
             <!-- SUBMISSION FORM -->
-            <form>
-                <h3>Daily Input Work Accomplishment Report</h3>
-                            
+            <form action="submission_form.php" method="post">
+                <h3>Daily Individual Work Accomplishment Report</h3>
+                
+                <p>WELCOME!</p>
+
+                <input name="Name" value=<?= htmlspecialchars($user["name"]) ?> > <br>
+                <input name="Email" value=<?= htmlspecialchars($user["email"]) ?> > <br>
+ 
                 <label for="date">DATE:</label>
-                <input type="date" name="date" required>
+                <input type="date" name="date" required><br>
                 <label for="time">TIME:</label>
-                <input type="time" name="time" required>
-                <label for="date">OUT:</label>
-                <input type="date" name="date" required>
-                <label for="date">DATE:</label>
-                <input type="date" name="date" required>
-                <label for="date">DATE:</label>
-                <input type="date" name="date" required>
+                <input type="time" name="time" required><br>
+                <label for="output">OUTPUT FOR THE DAY:</label>
+                <input type="text" name="output" required><br>
+                <label for="details">DETAILS OF THE OUTPUT:</label>
+                <input type="text" name="details" required><br>
+                <label for="verify">VERIFICATION:</label>
+                <input type="text" name="verify" required><br><br>
+                <button name="Submit">Submit Form</button><br>
             </form>
             
 
