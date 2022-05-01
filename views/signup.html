@@ -9,10 +9,17 @@
 <body>
     <h1>SIGNUP!!!!</h1>
     <form action="../php/signup.php" method="post" novalidate>
+        <input type="text" name="teacher_id" required placeholder="Teacher's ID#"><br>
         <input type="email" name="email" required placeholder="Email Address"><br>
         <input type="text" name="name" required placeholder="Name"><br>
         <input type="password" name="password" required placeholder="Password"><br>
         <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>
+        <label for="positon">Position:</label><br>
+           <select name="position" required>
+               <option value="Teaching_Staff">Teaching Staff</option>
+               <option value="Non_Teaching_Staff">Non-Teaching Staff</option>
+               <option value="Partime">Partime</option>
+           </select>
         <button type="submit">SIGNUP</button>
     </form>
     <a href="../index.php">LOGIN</a>

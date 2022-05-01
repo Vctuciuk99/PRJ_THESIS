@@ -20,9 +20,9 @@ $isInvalid = false;
                 session_start();
                 session_regenerate_id();
 
-                $_SESSION["user_id"] = $user["id"];
+                $_SESSION["session_id"] = $user["teacher_id"];
 
-                header("Location: ./php/acc_home.php");
+                header("Location: ./views/acc_home.php");
                 exit;
 
             }

@@ -39,8 +39,8 @@
 $mysqli = require __DIR__ . "/database_conn.php";
 
 //insert new record
-$sql = "INSERT INTO user  (email, name, password_hash)
-            VALUES (?, ?, ?)";
+$sql = "INSERT INTO user  (teacher_id, email, name, position, password_hash)
+            VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
@@ -48,17 +48,24 @@ if(!$stmt->prepare($sql)) {
     die("SQL error: ". $mysqli->error);
 }
 
-$stmt->bind_param("sss",  $_POST["email"], $_POST["name"], $password_hash);
+$stmt->bind_param("sssss", 
+        $_POST["teacher_id"], 
+        $_POST["email"], 
+        $_POST["name"], 
+        $_POST["position"],
+        $password_hash, 
+    ); 
 
 //handle duplicate entry error
 if ($stmt->execute()) {
     //redirect user to page after successfull regisration
-    header("Location: ../php/acc_home.php");
+    
+    header("Location: ../views/successful_signup.html");
     exit;
 
 } else {
     if ( $mysqli->errno === 1062) {
-        die("Email already taken");
+        die("Email or Teacher's ID already registered" );
     } else {
     die($mysqli->error . " " . $mysqli->errno);
     }
