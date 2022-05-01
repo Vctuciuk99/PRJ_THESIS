@@ -4,9 +4,15 @@
     $mysqli = require "../php/database_conn.php";
 
     $tableName="record";
-    $columns= ['id', 'teacher_id', 
-                'email', 'name', 'date', 'time_from', 
-                'time_to', 'output', 'details', 'verification'];
+    $columns= ['teacher_id', 
+                'email', 
+                'name', 
+                'date', 
+                'time_from', 
+                'time_to', 
+                'output', 
+                'details', 
+                'verification'];
     
     $fetchData = fetch_data($mysqli, $tableName, $columns);
     function fetch_data($mysqli, $tableName, $columns){
@@ -18,7 +24,7 @@
        $msg= "Table Name is empty";
     }else{
     
-    $columnName = implode(", ", $columns);
+    //$columnName = implode(", ", $columns);
     
     $query = "SELECT * FROM record WHERE 
                             teacher_id = {$_SESSION["session_id"]}";

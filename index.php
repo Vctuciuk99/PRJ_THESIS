@@ -3,7 +3,7 @@
 $isInvalid = false;
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
+                                    //nakalabas sakin ung index sa php folder kaya ganto
         $mysqli = require __DIR__ . "./php/database_conn.php";
 
         $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
@@ -59,7 +59,7 @@ $isInvalid = false;
             <em>email or password is invalid</em>
         <?php endif; ?><br>
 
-        <button type="submit">LOGIN</button>
+        <button>LOGIN</button>
     </form>
     <a href="./views/signup.html">SIGNUP</a>
 </body>

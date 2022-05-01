@@ -1,3 +1,7 @@
+<?php 
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +19,7 @@
         <label for="confirm_pass">Confirm password: </label>
         <input type="password" name="confirm_pass" required><br>
         <button type="submit">Confirm</button>
+
     </form>
     <a href="./acc_home.php">Back</a>
 </body>

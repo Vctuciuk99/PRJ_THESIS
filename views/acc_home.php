@@ -57,14 +57,10 @@
 
             <a href="./changePass.php">Change Password</a><br><br>
 
-
-
-
             <!--Logout user from the session -->
             <a href="../php/logout.php">LOGOUT</a>
         <?php else: ?>
             <!--redirect to loginpage if no session -->
-            <p><a href = "../index.php"></a></p>
             <?php header("Location: ../index.php"); ?>
         <?php endif; ?>
     </body>

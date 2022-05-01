@@ -17,7 +17,6 @@
     <div class="table-responsive">
       <table class="table table-bordered">
        <thead><tr><th></th>
-         <th>ID</th>
          <th>TEACHER_ID</th>
          <th>EMAIL</th>
          <th>NAME</th>
@@ -37,7 +36,6 @@
         <!-- PANGALAN NG COLUMN SA DB -->
       <tr>
       <td><?php echo $rows; ?></td>
-      <td><?php echo $data['id']??''; ?></td>
       <td><?php echo $data['teacher_id']??''; ?></td>
       <td><?php echo $data['email']??''; ?></td>
       <td><?php echo $data['name']??''; ?></td>
