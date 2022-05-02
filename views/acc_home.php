@@ -1,18 +1,6 @@
-<?php
-    session_start(); 
 
-    //check if session_id is available
-    if (isset($_SESSION["session_id"])) {
+<?php include "../php/check_user.php"?>
 
-        $mysqli = require "../php/database_conn.php";
-
-        $sql = "SELECT * FROM user
-                WHERE teacher_id = {$_SESSION["session_id"]}" ;
-
-        $result = $mysqli->query($sql);
-        $user = $result->fetch_assoc();
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +21,9 @@
                 <h3>Daily Individual Work Accomplishment Report</h3>
                 
                 <p>WELCOME!</p>
-                <input name="teacher_id" value=<?= htmlspecialchars($user["teacher_id"]) ?> readonly> <br>
-                <input name="name" value=<?= htmlspecialchars($user["name"]) ?> readonly> <br>
-                <input name="email" value=<?= htmlspecialchars($user["email"]) ?> readonly> <br>
+                <input name="teacher_id" value=<?= htmlspecialchars($user["Employee_No"]) ?> readonly> <br>
+                <input name="name" value=<?= htmlspecialchars($user["Name"]) ?> readonly> <br>
+                <input name="email" value=<?= htmlspecialchars($user["Email"]) ?> readonly> <br>
  
                 <label for="date">DATE: </label>
                 <input type="date" name="date" required><br>
@@ -61,6 +49,7 @@
             <a href="../php/logout.php">LOGOUT</a>
         <?php else: ?>
             <!--redirect to loginpage if no session -->
+            
             <?php header("Location: ../index.php"); ?>
         <?php endif; ?>
     </body>

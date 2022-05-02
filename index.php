@@ -1,6 +1,6 @@
 <!--LOGIN PAGE PHP CODE-->
-<?php
-$isInvalid = false;
+<?php include "./php/login.php"?>
+<!-- $isInvalid = false;
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     //nakalabas sakin ung index sa php folder kaya ganto
@@ -30,7 +30,7 @@ $isInvalid = false;
         $isInvalid = true;
     }
 
-?>
+?> -->
 
 <!--VON MAY CODE NG PHP SA LOOB NG FORM-->
 <!DOCTYPE html>
