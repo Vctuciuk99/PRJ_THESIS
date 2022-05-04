@@ -4,7 +4,8 @@
 $mysqli = require __DIR__ . "/database_conn.php";
 
 //insert new record
-$sql = "INSERT INTO record (teacher_id, email, name, date, time_from, time_to, output, details, verification)
+$sql = "INSERT INTO user_diwar_record 
+    (Employee_no, Email, Name, Date, Time_from, Time_to, Output, Details, Verification)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
@@ -14,15 +15,15 @@ if(!$stmt->prepare($sql)) {
 }
 
 $stmt->bind_param("sssssssss",  
-        $_POST["teacher_id"],
-        $_POST["email"], 
-        $_POST["name"], 
-        $_POST["date"], 
-        $_POST["time_from"],
-        $_POST["time_to"], 
-        $_POST["output"], 
-        $_POST["details"], 
-        $_POST["verify"]
+        $_POST["Employee_no"],
+        $_POST["Email"], 
+        $_POST["Name"], 
+        $_POST["Date"], 
+        $_POST["Time_from"],
+        $_POST["Time_to"], 
+        $_POST["Output"], 
+        $_POST["Details"], 
+        $_POST["Verify"]
     );
 
 

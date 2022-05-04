@@ -3,16 +3,16 @@
     
     $mysqli = require "../php/database_conn.php";
 
-    $tableName="record";
-    $columns= ['teacher_id', 
-                'email', 
-                'name', 
-                'date', 
-                'time_from', 
-                'time_to', 
-                'output', 
-                'details', 
-                'verification'];
+    $tableName="user_diwar_record";
+    $columns= ['Employee_no', 
+                'Email', 
+                'Name', 
+                'Date', 
+                'Time_from', 
+                'Time_to', 
+                'Output', 
+                'Details', 
+                'Verification'];
     
     $fetchData = fetch_data($mysqli, $tableName, $columns);
     function fetch_data($mysqli, $tableName, $columns){
@@ -26,8 +26,8 @@
     
     //$columnName = implode(", ", $columns);
     
-    $query = "SELECT * FROM record WHERE 
-                            teacher_id = {$_SESSION["session_id"]}";
+    $query = "SELECT * FROM user_diwar_record WHERE 
+                            Employee_no = {$_SESSION["session_id"]}";
 
     $result = $mysqli->query($query);
 

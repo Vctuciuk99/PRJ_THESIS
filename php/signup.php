@@ -1,6 +1,5 @@
 <?php
     
-
     //password confirmation
     if ($_POST["password"] !== $_POST["confirm_password"]) {
         die("Password must match"); 
@@ -57,4 +56,3 @@ if ($stmt_personal_info->execute()) {
     die($mysqli->error . " " . $mysqli->errno);
     }
 }
-

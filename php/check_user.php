@@ -1,6 +1,8 @@
 <?php
-    session_start(); 
-
+    session_start();
+    
+    //print_r($_SESSION);
+    //print_r($_SESSION);
     //check if session_id is available
     if (isset($_SESSION["session_id"])) {
 

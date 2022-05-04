@@ -8,6 +8,7 @@
     <title>Document</title>
     <!--BOOTSTRAP PARA SA TABLE-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="../js/table2excel.js"></script>
 </head>
 <body>
 <div class="container">
@@ -15,7 +16,7 @@
    <div class="col-sm-8">
     <?php echo $deleteMsg??''; ?>
     <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered" id="diwar-report">
        <thead><tr><th></th>
          <th>TEACHER_ID</th>
          <th>EMAIL</th>
@@ -36,15 +37,15 @@
         <!-- PANGALAN NG COLUMN SA DB -->
       <tr>
       <td><?php echo $rows; ?></td>
-      <td><?php echo $data['teacher_id']??''; ?></td>
-      <td><?php echo $data['email']??''; ?></td>
-      <td><?php echo $data['name']??''; ?></td>
-      <td><?php echo $data['date']??''; ?></td>
-      <td><?php echo $data['time_from']??''; ?></td>
-      <td><?php echo $data['time_to']??''; ?></td> 
-      <td><?php echo $data['output']??''; ?></td>
-      <td><?php echo $data['details']??''; ?></td>  
-      <td><?php echo $data['verification']??''; ?></td>     
+      <td><?php echo $data['Employee_no']??''; ?></td>
+      <td><?php echo $data['Email']??''; ?></td>
+      <td><?php echo $data['Name']??''; ?></td>
+      <td><?php echo $data['Date']??''; ?></td>
+      <td><?php echo $data['Time_from']??''; ?></td>
+      <td><?php echo $data['Time_to']??''; ?></td> 
+      <td><?php echo $data['Output']??''; ?></td>
+      <td><?php echo $data['Details']??''; ?></td>  
+      <td><?php echo $data['Verification']??''; ?></td>     
      </tr>
      <?php
       $rows++;}}else{ ?>
@@ -59,8 +60,15 @@
      </table>
    </div>
    <a href="./acc_home.php">BACK</a>
+   <button id="downloadexcel">DOWNLOAD AS EXCEL FILE</button>
 </div>
 </div>
-</div>
+  </div>
+  <script>
+    document.getElementById('downloadexcel').addEventListener('click', function() {
+      var table2Excel = new Table2Excel();
+        table2Excel.export(document.querySelectorAll("#diwar-report"));
+    })
+  </script>
 </body>
 </html>
