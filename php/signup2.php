@@ -18,6 +18,7 @@
     $password = filter_input(INPUT_POST, 'password');
     $con_password = filter_input(INPUT_POST, 'confirm_password');
 
+    //SIGNUP VALIDATION MULA DITO
     //empty email
     if(empty($employee)) {
         $employee_error = "Please enter a valid employee id.";
@@ -94,10 +95,10 @@
     if ($password !== $con_password) {
         $password_error = "Password did not match" ;
     }
-    
+    //HANGGANG DITO
+
     //hash password
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); 
-
 
     //database connection
     $mysqli = require __DIR__ . "/database_conn.php";

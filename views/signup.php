@@ -62,14 +62,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script defer src="../js/signup_validation.js"></script> -->
 
-    <!-- FONT AWESOME -->
-    <!-- gawa ka acc sa fontawesome.com von iba iba ng src kada pc to -->
-    <!-- <script src="https://kit.fontawesome.com/2e1afc68f8.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="../style/style.css"> -->
-    <!-- <script src="../js/signup_validation.js"></script> -->
-    <!-- <script src="../js/signup_validation.js"></script> -->
 </head>
 <body>
     <h1>SIGNUP!!!!</h1>
@@ -103,7 +96,7 @@
                         <option value="Mechanical Engineering">Mechanical Engineering</option>
                     </select><br>
 
-                    <!-- error msg -->
+                <!-- error msg -->
                     <?php if (isset($department_error)) { ?>
                         <p><?php echo $department_error ?></p>
                     <?php } ?>
@@ -117,7 +110,7 @@
                         <p><?php echo $name_error ?></p>
                     <?php } ?>
                 
-                    <!-- Address -->
+                <!-- Address -->
                 <!-- House No. -->
                     <label for="house_no">Address: </label><br>
                     <input type="text" name="house_no" id="house_no" placeholder="House number" 

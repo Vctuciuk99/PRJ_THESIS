@@ -1,4 +1,3 @@
-
 <?php include "../php/check_user.php"?>
 
 
@@ -24,19 +23,25 @@
                 <input name="Employee_no" value=<?= htmlspecialchars($user["Employee_No"]) ?> readonly> <br>
                 <input name="Name" value="<?= htmlspecialchars($user["Name"]) ?>" > <br>
                 <input name="Email" value="<?= htmlspecialchars($user["Email"]) ?>" readonly> <br>
- 
+                
+                <!-- Date -->
                 <label for="Date">DATE: </label>
                 <input type="date" name="Date" required><br>
+                <!-- error msg -->
+                <?php if (isset($date_error)) { ?>
+                    <p><?php echo $date_error ?></p>
+                <?php } ?>
+
                 <label for="Time_from">TIME FROM: </label>
-                <input type="time" name="Time_from" required><br>
+                <input type="time" name="Time_from" ><br>
                 <label for="Time_to">TIME TO:</label>
-                <input type="time" name="Time_to" required><br>
+                <input type="time" name="Time_to" ><br>
                 <label for="Output">OUTPUT FOR THE DAY: </label>
-                <input type="text" name="Output" required><br>
+                <input type="text" name="Output" ><br>
                 <label for="Details">DETAILS OF THE OUTPUT: </label>
-                <input type="text" name="Details" required><br>
+                <input type="text" name="Details" ><br>
                 <label for="Verify">VERIFICATION: </label>
-                <input type="text" name="Verify" required><br><br>
+                <input type="text" name="Verify" ><br><br>
 
                 <button type="submit" name="submit">Submit Form</button><br><br>
                 
