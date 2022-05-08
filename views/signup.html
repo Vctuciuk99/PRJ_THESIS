@@ -6,90 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="../js/signup_validation.js"></script>
+
+    <!-- FONT AWESOME -->
+    <!-- gawa ka acc sa fontawesome.com von iba iba ng src kada pc to -->
+    <!-- <script src="https://kit.fontawesome.com/2e1afc68f8.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="../style/style.css"> -->
+    <!-- <script src="../js/signup_validation.js"></script> -->
+
 </head>
 <body>
     <h1>SIGNUP!!!!</h1>
-      
-        <form action="../php/signup.php" method="post">
-        
-        <!-- Personal Information -->
-        <h4>Personal Information</h4>
-        
-        <!-- Employee # -->
-            <label for="employee_no">Employee number: </label>
-            <input type="text" onkeypress="isInputNumber(event)" name="employee_no" id="employee_no" placeholder="Employer number">
+        <form action="" method="post" id="myForm">
+            
+                <!-- Personal Information -->
+                <h4>Personal Information</h4>
+   
+                <!-- Employee # -->
+                <label for="employee_no">Employee number: </label><br>
+                <input type="text" onkeypress="isInputNumber(event)" name="employee_no" id="employee_no" placeholder="Employer number"><br>
+                <span class="helper-text"></span>
+                <!-- Department -->
+                    <label for="department">Select your Department: </label><br>
+                    <select name="department" id="department">
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Electronics Engineering">Electronics Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    </select><br>    
+            
 
-        
-        <!-- Department -->
-            <label for="department">Select your Department: </label><br>
-            <select name="department" id="department">
-                <option value="Civil Engineering">Civil Engineering</option>
-                <option value="Computer Engineering">Computer Engineering</option>
-                <option value="Electrical Engineering">Electrical Engineering</option>
-                <option value="Electronics Engineering">Electronics Engineering</option>
-                <option value="Mechanical Engineering">Mechanical Engineering</option>
-            </select><br>    
-        
-        <!-- Name -->
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name" placeholder="Name">
-            <div id="error"></div>     
-        
-        <!-- Address -->
-        <!-- House No. -->
-            <label for="house_no">Address: </label><br>
-            <input type="text" name="house_no" id="house_no" placeholder="House number"><br>
-        
-        <!-- Barangay -->
-            <input type="text" name="barangay" id="barangay" placeholder="Barangay">    
-        
-        <!-- Municipality -->
-            <input type="text" onkeypress="isInputLetter(event)" name="municipality" id="municipality" placeholder="Municipality"><br>
+                <!-- Name -->
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Name"><br>
+                    
+                <!-- Address -->
+                <!-- House No. -->
+                    <label for="house_no">Address: </label><br>
+                    <input type="text" name="house_no" id="house_no" placeholder="House number">
+                    
+                <!-- Barangay -->
+                    <input type="text" name="barangay" id="barangay" placeholder="Barangay"><br>
+                    
+                <!-- Municipality -->
+                    <input type="text" onkeypress="isInputLetter(event)" name="municipality" id="municipality" placeholder="Municipality">
+                    
+                <!-- Region -->
+                    <input type="text" name="region" id="region" placeholder="Region"><br>
+                    
+                <!-- Province -->
+                    <input type="text" onkeypress="isInputLetter(event)" name="province" id="province" placeholder="Province">
+                    
+                <!-- Country -->
+                    <input type="text" onkeypress="isInputLetter(event)" name="country" id="country" placeholder="Country"><br>
+                    
+                <!-- Postal Code -->
+                    <input type="text" onkeypress="isInputNumber(event)" name="postal_code" id="postal_code" placeholder="Postal Code">
+                    
+                <!-- Contact Information -->
+                <h4>Contact Information</h4>
 
-        <!-- Region -->
-            <input type="text" name="region" id="region" placeholder="Region">
+                <!-- Email -->
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Email"><br>
+                    
+                <!-- Contact Number -->
+                    <label for="contact_num">Contact Number: </label>
+                    <input type="text" onkeypress="isInputNumber(event)" name="contact_num" id="contact_num" placeholder="Contact Number"><br>
+                    
+                <!-- Telephone Number -->
+                    <label for="telephone_num">Telephone Number: </label>
+                    <input type="text" onkeypress="isInputNumber(event)" name="telephone_num" id="telephone_num" placeholder="Telephone Number"><br>
+                    
+                <!-- Signup Credential -->
+                <h4>SIGNUP CREDENTIAL</h4>
 
-        <!-- Province -->
-            <input type="text" onkeypress="isInputLetter(event)" name="province" id="province" placeholder="Province"><br>
-     
-        <!-- Country -->
-            <input type="text" onkeypress="isInputLetter(event)" name="country" id="country" placeholder="Country">
-        
-        <!-- Postal Code -->
-            <input type="text" onkeypress="isInputNumber(event)" name="postal_code" id="postal_code" placeholder="Postal Code"><br><br>
-        
-        <!-- Contact Information -->
-        <h4>Contact Information</h4>
+                <!-- Email -->
+                    <label for="email_2">Email: </label> 
+                    <input type="email" name="email_2" id="email_2" placeholder="Email"><br>
+ 
+            </div>
 
-        <!-- Email -->
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" placeholder="Email"><br>
+                <!-- Password -->
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Password"><br>
+                    
+                <!-- Confirm Password -->
+                    <label for="confirm_password">Confirm Password: </label>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br>
+                    
+                <button type="submit">SIGNUP</button>
+                
+            
+        </form>
         
-        <!-- Contact Number -->
-            <label for="contact_num">Contact Number: </label>
-            <input type="text" onkeypress="isInputNumber(event)" name="contact_num" id="contact_num" placeholder="Contact Number"><br>
-        
-        <!-- Telephone Number -->
-            <label for="telephone_num">Telephone Number: </label>
-            <input type="text" onkeypress="isInputNumber(event)" name="telephone_num" id="telephone_num" placeholder="Telephone Number"><br><br>
-       
-        <!-- Signup Credential -->
-        <h4>SIGNUP CREDENTIAL</h4>
-
-        <!-- Email -->
-            <label for="email_2">Email: </label> 
-            <input type="email" name="email_2" id="email_2" placeholder="Email"><br>
-        
-        <!-- Password -->
-            <label for="password">Password: </label>
-            <input type="password" name="password" id="password" placeholder="Password"><br>
-        
-        <!-- Confirm Password -->
-            <label for="confirm_password">Confirm Password: </label>
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br>
-     
-        <button type="submit">SIGNUP</button>
-    </form>
     <script>
         function isInputNumber(evt) {
         var ch = String.fromCharCode(evt.which);
@@ -109,5 +119,6 @@
     </div>
     
     <a href="../index.php">LOGIN</a>
+    
 </body>
 </html>

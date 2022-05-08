@@ -1,9 +1,24 @@
 <?php
-    
-    //password confirmation
-    if ($_POST["password"] !== $_POST["confirm_password"]) {
-        die("Password must match"); 
-    }
+
+// if (empty($_POST["email"])) {
+//     die("Email is required");
+// }
+
+// //validate email
+// if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL )) {
+//     die("Please enter a valid email");
+// }
+
+// //password length validation
+// if (strlen($_POST["password"]) < 8) {
+//     die("Password must be atleaset 8 characters");
+// }
+
+
+//     //password confirmation
+//     if ($_POST["password"] !== $_POST["confirm_password"]) {
+//         die("Password must match"); 
+//     }
 
     //hash password
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); 

@@ -61,6 +61,6 @@
 
         <button>LOGIN</button>
     </form>
-    <a href="./views/signup.html">SIGNUP</a>
+    <a href="./views/signup.php">SIGNUP</a>
 </body>
 </html>

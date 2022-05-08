@@ -91,19 +91,19 @@
     <script>
 
         document.getElementById('myButton').onclick = function() {
-            document.getElementById('department').disabled = false;
-            document.getElementById('name').readOnly = false;
-            document.getElementById('house_no').readOnly = false;
-            document.getElementById('barangay').readOnly = false;
-            document.getElementById('municipality').readOnly = false;
-            document.getElementById('region').readOnly = false;
-            document.getElementById('province').readOnly = false;
-            document.getElementById('country').readOnly = false;
-            document.getElementById('postal_code').readOnly = false;
-            document.getElementById('email').readOnly = false;
-            document.getElementById('contact_num').readOnly = false;
-            document.getElementById('telephone_num').readOnly = false;
-            document.getElementById('email_2').readOnly = false;
+        document.getElementById('department').disabled = false;
+        document.getElementById('name').readOnly = false;
+        document.getElementById('house_no').readOnly = false;
+        document.getElementById('barangay').readOnly = false;
+        document.getElementById('municipality').readOnly = false;
+        document.getElementById('region').readOnly = false;
+        document.getElementById('province').readOnly = false;
+        document.getElementById('country').readOnly = false;
+        document.getElementById('postal_code').readOnly = false;
+        document.getElementById('email').readOnly = false;
+        document.getElementById('contact_num').readOnly = false;
+        document.getElementById('telephone_num').readOnly = false;
+        document.getElementById('email_2').readOnly = false;
             
             
         };

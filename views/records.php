@@ -18,7 +18,7 @@
     <div class="table-responsive">
       <table class="table table-bordered" id="diwar-report">
        <thead><tr><th></th>
-         <th>TEACHER_ID</th>
+         <th>EMPLOYEEd_ID</th>
          <th>EMAIL</th>
          <th>NAME</th>
          <th>DATE</th>

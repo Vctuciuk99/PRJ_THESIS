@@ -49,7 +49,9 @@
             <a href="./records.php">All Record Log</a><br><br>
 
             <!--Logout user from the session -->
-            <a href="../php/logout.php">LOGOUT</a>
+            <a href="../php/logout.php">LOGOUT</a><br>
+
+
         <?php else: ?>
             <!--redirect to loginpage if no session -->
             
