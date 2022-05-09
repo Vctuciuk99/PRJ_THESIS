@@ -1,0 +1,13 @@
+SIGNUP VALIDATION 
+-signup.php from views folder
+-signup_validation from php folder for input validation
+-singup.php from php folder for database
+
+<---(FOLDER)--->
+USE SINGUP_VALIDATION.PHP(PHP) AS ACTION FROM SIGNUP.PHP(VIEWS) FORM
+ON SIGNUP_VALIDATION.PHP(PHP) CREATE IF ELSE STATEMENT IF NO ERROR PROCEED TO SIGNUP.PHP(PHP) ELSE GO BACK TO SIGNUP.PHP(VIEWS)
+
+(SAME LOGIC APPLY TO SUBMISSION VALIDATION)
+SUBMISSION VALIDATION
+-acc_home.php from views folder
+-submission_form.php

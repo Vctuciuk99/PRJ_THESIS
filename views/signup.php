@@ -66,7 +66,7 @@
 </head>
 <body>
     <h1>SIGNUP!!!!</h1>
-        <form action="../php/signup2.php" method="post" id="myForm">
+        <form action="../php/signup_validation.php" method="post" id="myForm">
             
                 <!-- Personal Information -->
                 <h4>Personal Information</h4>
