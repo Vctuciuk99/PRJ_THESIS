@@ -84,6 +84,9 @@
             <input type="password" name="confirm_password" id="confirm_password" readonly="readonly"><br> -->
         
         <button type="submit" >Update</button>
+        <?php if (isset($message1)) { ?>
+            <p><?php echo $message1 ?></p>
+        <?php } ?>
     </form>
 
     <input id="myButton" type="submit" value="Edit" />

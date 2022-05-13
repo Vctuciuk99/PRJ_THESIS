@@ -33,10 +33,9 @@ if(!$stmt->prepare($sql)) {
 
 if ($stmt->execute()) {
     //redirect user to page after successfull regisration
- 
     header("Location: ../views/acc_home.php");
-    die("Report Submitted Successfully");
-    
+    $message1 = "Report Submitted Successfully";
+    include('../views/update_info.php');
     exit;
 
 } else {

@@ -73,7 +73,7 @@
 
                 <!-- duplicate email or employeeid entry -->
                 <?php if (isset($error)) { ?>
-                    <p><?php echo $error ?></p>
+                    <p style="color:red;"><?php echo $error ?></p>
                 <?php } ?>
 
                 <!-- Employee # -->
@@ -82,7 +82,7 @@
                     placeholder="Employer number" value="<?php echo htmlspecialchars($employee)?>" ><br>
                 <!-- error msg -->
                 <?php if (isset($employee_error)) { ?>
-                    <p><?php echo $employee_error ?></p>
+                    <p style="color: red;"><?php echo $employee_error ?></p>
                 <?php } ?>
 
                 <!-- Department -->
@@ -98,7 +98,7 @@
 
                 <!-- error msg -->
                     <?php if (isset($department_error)) { ?>
-                        <p><?php echo $department_error ?></p>
+                        <p style="color:red;"><?php echo $department_error ?></p>
                     <?php } ?>
 
                 <!-- Name -->
@@ -107,7 +107,7 @@
                     value="<?php echo htmlspecialchars($name)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($name_error)) { ?>
-                        <p><?php echo $name_error ?></p>
+                        <p style="color:red;"><?php echo $name_error ?></p>
                     <?php } ?>
                 
                 <!-- Address -->
@@ -121,7 +121,7 @@
                     value="<?php echo htmlspecialchars($barangay)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($barangay_error)) { ?>
-                        <p><?php echo $barangay_error ?></p>
+                        <p style="color:red;"><?php echo $barangay_error ?></p>
                     <?php } ?>
 
                 <!-- Municipality -->
@@ -133,7 +133,7 @@
                     value="<?php echo htmlspecialchars($region)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($region_error)) { ?>
-                        <p><?php echo $region_error ?></p>
+                        <p style="color:red;"><?php echo $region_error ?></p>
                     <?php } ?>
 
                 <!-- Province -->
@@ -145,7 +145,7 @@
                     value="<?php echo htmlspecialchars($country)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($country_error)) { ?>
-                        <p><?php echo $country_error ?></p>
+                        <p style="color:red;"><?php echo $country_error ?></p>
                     <?php } ?>
 
                 <!-- Postal Code -->
@@ -153,7 +153,7 @@
                     value="<?php echo htmlspecialchars($postal_code)?>">
                     <!-- error msg -->
                     <?php if (isset($postal_code_error)) { ?>
-                        <p><?php echo $postal_code_error ?></p>
+                        <p style="color:red;"><?php echo $postal_code_error ?></p>
                     <?php } ?>
 
                 <!-- Contact Information -->
@@ -165,7 +165,7 @@
                     value="<?php echo htmlspecialchars($email)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($email_error)) { ?>
-                        <p><?php echo $email_error ?></p>
+                        <p style="color:red;"><?php echo $email_error ?></p>
                     <?php } ?>
 
                 <!-- Contact Number -->
@@ -174,7 +174,7 @@
                     value="<?php echo htmlspecialchars($contact_num)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($contact_num_error)) { ?>
-                        <p><?php echo $contact_num_error ?></p>
+                        <p style="color:red;"><?php echo $contact_num_error ?></p>
                     <?php } ?>
 
                 <!-- Telephone Number -->
@@ -183,7 +183,7 @@
                     value="<?php echo htmlspecialchars($telephone_num)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($telephone_num_error)) { ?>
-                        <p><?php echo $telephone_num_error ?></p>
+                        <p style="color:red;"><?php echo $telephone_num_error ?></p>
                     <?php } ?>
 
                 <!-- Signup Credential -->
@@ -195,7 +195,7 @@
                     value="<?php echo htmlspecialchars($email_2)?>"><br>
                     <!-- error msg -->
                     <?php if (isset($email_2_error)) { ?>
-                        <p><?php echo $email_2_error ?></p>
+                        <p style="color:red;"><?php echo $email_2_error ?></p>
                     <?php } ?>
 
                 <!-- Password -->
@@ -211,7 +211,7 @@
                     
                     <!-- error msg -->
                     <?php if (isset($password_error)) { ?>
-                        <p><?php echo $password_error ?></p>
+                        <p style="color:red;"><?php echo $password_error ?></p>
                     <?php } ?>
                 <button type="submit">SIGNUP</button>
                 
